@@ -13,10 +13,8 @@ int main() {
         v.push_back(num);
     }
     sort(v.begin(), v.end());
-    string result;
-       for(int num : v) {
-           result += to_string(num) + "\n"; // 각 숫자를 문자열로 변환하여 result에 추가
-       }
-       cout << result; // 결과 한 번에 출력
+    for(int i = 0; i < N; i++){
+        cout << v[i] <<'\n';
+    }
     return 0;
 }
