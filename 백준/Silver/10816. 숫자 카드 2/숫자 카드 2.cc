@@ -7,6 +7,8 @@ using namespace std;
 
 
 int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     int N,M;
     int a;
     int t;
@@ -19,17 +21,16 @@ int main() {
     sort(v.begin(),v.end());
     cin >> M;
     for(int i =0; i<M; i++){
-        scanf("%d", &t);
+        cin >> t;
         int target = t;
         bool found = binary_search(v.begin(), v.end(), target);
         if(found == 1){
             auto range = equal_range(v.begin(),v.end(),target);
-            int equal = range.second - range.first;
-//            cout << range.second - range.first <<'\n';
-            printf("%d ",equal);
+            auto equal = range.second - range.first;
+            cout << equal << " ";
         }
         else{
-            printf("%d ",found);
+            cout << found << " ";
         }
     }
     
