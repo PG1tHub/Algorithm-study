@@ -12,7 +12,7 @@ int main(){
     long long count = 0;
     long long sum = 0;
     for(long long i = 1; ; i++){
-        count = (i*(i+1) /2);
+        count += i;
         if(count > N){
             break;
         }
